@@ -7,8 +7,12 @@ class RestaurantsController < ApplicationController
         @restaurant = Restaurant.find(params[:id])
     end
 
-    def create
+    def new
+        @restaurant = Restaurant.new
+    end
 
+    def create
+        @restaurant = Restaurant.new
     end
 
     def edit
