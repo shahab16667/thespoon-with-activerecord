@@ -1,10 +1,8 @@
-<form action="/restaurants" method="post">
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token  %>
-    <label for="name">Name</label>
-    <input type="text" name="restaurant[name]" value="Yummy">
-    <label for="address">Address</label>
-    <input type="text" name="restaurant[address]" value="Calofornia">
-    <label for="rating">Rating</label>
-    <input type="number" name="restaurant[rating]" value="4">
-    <input type="submit">
-</form>
+<%= form_for @restaurant do |f| %>
+<%= f.label :name  %>
+<%= f.text_field :name %>
+<%= f.label :address %>
+<%= f.label :rating %>
+<%= f.number_field :rating %>
+<%= f.submit %>
+<% end %>
